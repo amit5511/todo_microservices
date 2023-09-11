@@ -12,7 +12,7 @@ app.use(cors({
 }));
 
 
-subscriber.subscribe("/add")
+subscriber.subscribe("/add_todo")
 subscriber.on("message", async(cahnnel,data) => {
     switch(cahnnel){
         case '/add':{

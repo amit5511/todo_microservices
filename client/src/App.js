@@ -13,7 +13,7 @@ function App() {
         id:todo?Number(todo.length)+1:1,
         name:todoref.current.value
       }
-    client.publish("/add",JSON.stringify(val));
+    client.publish("/add_todo",JSON.stringify(val));
     todoref.current.value =''
     await new Promise(resolve => setTimeout(resolve, 500));
     getTodo()
